@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pro Token Scanner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADING SCREEN -->
+<div id="loader">
+    <div class="loader-box">
+        <div class="spinner"></div>
+        <div class="loader-text">Loading...</div>
+    </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">TokenScannerX</div>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Docs</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
+
+<!-- MAIN -->
+<div class="container">
+    <h2 class="title">Premium Token Scanner</h2>
+
+    <input type="text" id="ca" placeholder="Enter Contract Address…">
+    <button onclick="scanToken()">SCAN</button>
+
+    <div id="result" class="result-card"></div>
+
+    <!-- CUSTOM CANDLE CHART -->
+    <div class="chart-box">
+        <canvas id="candleCanvas"></canvas>
+
+        <!-- TIMEFRAME BUTTONS -->
+        <div class="timeframe-box">
+            <button onclick="setTimeframe(60)">1m</button>
+            <button onclick="setTimeframe(300)">5m</button>
+            <button onclick="setTimeframe(900)">15m</button>
+            <button onclick="setTimeframe(3600)">1H</button>
+            <button onclick="setTimeframe(14400)">4H</button>
+            <button onclick="setTimeframe(86400)">1D</button>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    © 2025 TokenScannerX — All Rights Reserved.
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
